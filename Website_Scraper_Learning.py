@@ -8,7 +8,7 @@ response = requests.get('https://www.timesjobs.com/candidate/job-search.html?sea
 html_text = response.text
 
 # Create a BeautifulSoup object from the HTML content
-soup = BeautifulSoup(html_text, 'lxml')
+soup = BeautifulSoup(html_text, 'lxml')  # lxml is an external parser that reads the html file faster and more efficiently than python's standard html parser. 
 
 # Find job posts and format the findings
 job_posts = soup.find_all('li', class_='clearfix job-bx wht-shd-bx')
