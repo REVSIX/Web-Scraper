@@ -13,13 +13,13 @@ soup = BeautifulSoup(html_text, 'lxml')  # lxml is an external parser that reads
 # Find job posts and format the findings
 job_posts = soup.find_all('li', class_='clearfix job-bx wht-shd-bx')
 for job in job_posts:
-    company_role = job.h2.text.replace(' ', '')
-    company_name = job.h3.text.replace(' ', '')
-    company_location = job.span.text.replace(' ', '')
-    print(f"There is a job posting for:")
-    print(f"{company_name}Looking for a: {company_role}")
-    print()
-    print(f"The job is based in {company_location}.")
-    for i in range(2):
-        print()
+    company_role = job.h2.text
+    company_name = job.h3.text.replace('  ','')
+    company_location = job.span.text
+    print(f'''
+There is a job posting for a{company_role}at
+{company_name}in {company_location}. 
+
+
+''')
 
