@@ -1,3 +1,6 @@
+# IMPORTANT: IN ORDER TO RUN THIS CODE, YOU MUST CREATE A FOLDER TITLED "JOBS", PREFERABLY IN THE FOLDER YOU STORE THIS PROGRAM IN.
+
+# Import Libraries 
 from bs4 import BeautifulSoup
 import requests
 import time
